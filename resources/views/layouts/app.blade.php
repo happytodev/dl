@@ -30,8 +30,8 @@
     <header id="header">
         <div class="logo container">
             <div>
-                <h1><a href="index.html" id="logo" >TXT</a></h1>
-                <p>A responsive site template by HTML5 UP</p>
+                <h1><a href="/" id="logo" >DEV LOCATOR</a></h1>
+                <p>A free service to localize yourself with your skills</p>
             </div>
         </div>
     </header>
@@ -56,10 +56,10 @@
                 <ul class="navbar-nav ml-auto">
                     <!-- Authentication Links -->
                     @guest
-                        <li class="nav-item">
+                        <li class="nav-item{{ currentRoute(route('login')) }}">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item{{ currentRoute(route('register')) }}">
                             @if (Route::has('register'))
                                 <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                             @endif
@@ -91,7 +91,7 @@
     <!-- Banner -->
     <section id="banner">
         <div class="content">
-            <h2>Welcome to Dev Locator</h2>
+            <h2>Set your skills, set your localization, find your new mission !</h2>
             <p>A free service to localize yourself with your skills</p>
             <a href="#main" class="button scrolly">Alright let's go</a>
         </div>

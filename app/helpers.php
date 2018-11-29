@@ -1,7 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Agence
- * Date: 29/11/2018
- * Time: 22:45
- */
+if (!function_exists('currentRoute')) {
+    function currentRoute(...$routes)
+    {
+        foreach($routes as $route) {
+            if(request()->url() == $route) {
+                return ' active';
+            }
+        }
+    }
+}

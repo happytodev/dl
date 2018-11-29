@@ -1,7 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Agence
- * Date: 29/11/2018
- * Time: 22:25
- */
+<button type="submit" class="btn @isset($color){{ ' btn-' . $color }}@else btn-primary @endisset float-right">
+    {{ $slot }}
+</button>

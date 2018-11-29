@@ -1,7 +1,10 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Agence
- * Date: 29/11/2018
- * Time: 22:26
- */
+@extends('layouts.app')
+@section('content')
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                @yield('card')
+            </div>
+        </div>
+    </div>
+@endsection
